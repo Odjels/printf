@@ -1,7 +1,7 @@
 C - printf
 
-this is a team project.
-my collaborator is Opara Amarachi.
+This is a team project.
+My collaborator is Opara Amarachi.
 
 1) Write a function that produces output according to a format.
 2) Handle the following conversion specifiers:
