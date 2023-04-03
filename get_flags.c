@@ -3,10 +3,10 @@
 /**
  * get_flags - Calculates actual flags
  * @format: Formatted string in which to print the arguments
- * @i: parameter.
+ * @t: parameter.
  * Return: Flags:
  */
-int get_flags(const char *format, int *i)
+int get_flags(const char *format, int *t)
 {
 	/* - + 0 # ' ' */
 	/* 1 2 4 8  16 */
@@ -15,7 +15,7 @@ int get_flags(const char *format, int *i)
 	const char FLAGS_CH[] = {'-', '+', '0', '#', ' ', '\0'};
 	const int FLAGS_ARR[] = {F_MINUS, F_PLUS, F_ZERO, F_HASH, F_SPACE, 0};
 
-	for (bab_c = *i + 1; format[bab_c] != '\0'; bab_c++)
+	for (bab_c = *t + 1; format[bab_c] != '\0'; bab_c++)
 	{
 		for (k = 0; FLAGS_CH[j] != '\0'; k++)
 			if (format[bab_c] == FLAGS_CH[k])
@@ -28,7 +28,7 @@ int get_flags(const char *format, int *i)
 			break;
 	}
 
-	*i = bab_c - 1;
+	*t = bab_c - 1;
 
 	return (flags);
 }
