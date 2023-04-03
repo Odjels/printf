@@ -4,27 +4,26 @@
 /**
  * get_size - Calculates the size in which to cast the argument
  * @format: Formatted string to print the arguments
- * @i: List of arguments.
+ * @t: List of arguments.
  *
- * Return: size (s)
+ * Return: size (m)
  */
-int get_size(const char *format, int *i)
+int get_size(const char *format, int *t)
 {
-	int bab_c = *i + 1;
-	int s = 0;
+	int bab_c = *t + 1;
+	int m = 0;
 
 
 	if (format[bab_c] == 'l')
-		s = S_LONG;
+		m = S_LONG;
 	else if (format[bab_c] == 'h')
-		s = S_SHORT;
+		m = S_SHORT;
 
-	if (s == 0)
-		*i = bab_c - 1;
+	if (m == 0)
+		*t = bab_c - 1;
 	else
-		*i = bab_c;
+		*t = bab_c;
 
-	return (s);
+	return (m);
 
 }
-
